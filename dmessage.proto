@@ -1,0 +1,15 @@
+message reqGetSlotInfo {
+  required uint32 slotID=1;
+}
+
+message reqGetSlotList {
+  required bool tokenPresent=1;
+  required uint32 ulCount=2;
+}
+
+message DMessage {
+  required uint64 code=1;
+  optional reqGetSlotInfo GetSlotInfo=2;
+  optional reqGetSlotList GetSlotList=3;
+
+}
